@@ -34,11 +34,9 @@ function displayChart(dates, prices, forecastedPrices) {
         window.myChart.destroy();
     }
 
+    // Create labels for forecasted dates, assuming one label per trading day
     const forecastLabels = Array.from({ length: forecastedPrices.length }, (_, i) => `Forecast Day ${i + 1}`);
     const allLabels = dates.concat(forecastLabels);
-    const lastHistoricalPrice = prices[prices.length - 1];
-    const finalForecastedPrice = forecastedPrices[forecastedPrices.length - 1];
-    const forecastColor = (finalForecastedPrice >= lastHistoricalPrice) ? 'rgba(0, 200, 0, 1)' : 'rgba(255, 0, 0, 1)';
 
     window.myChart = new Chart(ctx, {
         type: 'line',
@@ -53,16 +51,16 @@ function displayChart(dates, prices, forecastedPrices) {
                     tension: 0.1
                 },
                 {
-                    label: '1-Month Forecasted Price',
+                    label: '5-Month Forecasted Price',
                     data: [...Array(dates.length).fill(null), ...forecastedPrices],
-                    borderColor: forecastColor,
+                    borderColor: 'rgba(0, 200, 0, 1)',
                     fill: false,
                     tension: 0.1
                 }
             ]
         },
         options: {
-            responsive: false,  // Disable responsiveness to keep fixed size
+            responsive: true,
             scales: {
                 x: {
                     title: { display: true, text: 'Date' }
@@ -73,5 +71,5 @@ function displayChart(dates, prices, forecastedPrices) {
             }
         }
     });
-    
 }
+
