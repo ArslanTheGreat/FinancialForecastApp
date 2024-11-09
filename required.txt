@@ -1,0 +1,7 @@
+Flask
+newsapi-python
+textblob
+yfinance
+tensorflow
+numpy
+scikit-learn

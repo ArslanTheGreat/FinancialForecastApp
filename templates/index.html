@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Bros Financial Forecast</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>RETROBIZ</h1>
+        <h2>Brought to you by: Cold Bros Financial Forecast</h2>
+        <p>
+            <img src="/static/retro_coin3.gif" alt="Retro Coin" class="coin-img">
+            Enter the company name to get a forecasted return:
+            <img src="/static/retro_coin3.gif" alt="Retro Coin" class="coin-img">
+        </p>
+    </header>
+
+    <div class="input-container">
+        <img src="/static/retro_coin3.gif" alt="Retro Coin" class="coin-img">
+        <input type="text" id="companyName" placeholder="e.g., AAPL">
+        <button onclick="getForecast()" class="retro-button">Get Forecast</button>
+        <img src="/static/retro_coin3.gif" alt="Retro Coin" class="coin-img">
+    </div>
+
+    <!-- Forecast results for different time frames -->
+    <div id="forecastResult" class="forecast-result"></div>
+
+    <!-- Chart section -->
+    <canvas id="forecastChart" width="800" height="400" style="margin-top: 20px;"></canvas>
+
+
+    <footer>
+        <p>© Cold Bros 2024 - Retro Edition</p>
+        <img src="/static/retro_coin3.gif" alt="Retro Coin" class="coin-img">
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
