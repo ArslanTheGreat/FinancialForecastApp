@@ -1,4 +1,5 @@
 Financial Forecasting Application
+
 This project is a machine learning-driven financial forecasting web application built with Flask. It leverages LSTM models, historical stock data, and sentiment analysis to predict short-term (1-day), medium-term (1-week), and longer-term (1-month) stock price movements for specified companies. The application provides predictions and backtests the model’s accuracy based on historical data, allowing users to compare forecasted prices against real historical data.
 
 Project Structure
